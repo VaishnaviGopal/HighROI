@@ -1,12 +1,13 @@
 # HighROI
 Exchange and replicate of files during the failover of any application or the datacenter
+
 ### Details of Proposed Solution and Outcome
 This infrastructure on cloud is a working solution illustration used by many IBM financial domain customers. The solution create an Infrastructure as Code by using IBM Cloud services to setup IBM Sterling B2B Integrator supporting Global Mailbox.  Once of the main feature of the Global Mailbox is supporting the replication of the files between data centres and administers the transaction mailboxes, messages, permissions, virtual routes, event rules. For more information, about the product, refer to  Global Mailbox management tool. 
 
 **Architecture**
 Solution architecture by using IBM Cloud offerings:
 
-![image](https://user-images.githubusercontent.com/43596586/123533821-37d76180-d736-11eb-9cd9-1280bf6f6f78.png)
+![HackathonArch_design](/HackathonArch_design.png)
 
 Detailed architecture flow:
 
