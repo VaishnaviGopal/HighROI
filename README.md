@@ -11,17 +11,17 @@ Solution architecture by using IBM Cloud offerings:
 
 Detailed architecture flow:
 
-•	User access the application through URL.
-•	Watchdog is the monitor tool that runs as part of the OS monitoring agent process for the two hosts. Watchdog agent is named as proxy agent service for AppReplica1 and AppRelica2 hosts.  The watchdog starts by default when the hosts are started. If the AppReplica1 process or connection fails watchdog monitors the logs and automatically redirects to the AppReplica2 host to process.
-•	GPFS is a high performance computing file system distributes and manage the data across multiple servers, and is implemented by python (Terraform) resources.
+- User access the application through URL.
+- Watchdog is the monitor tool that runs as part of the OS monitoring agent process for the two hosts. Watchdog agent is named as proxy agent service for AppReplica1 and AppRelica2 hosts.  The watchdog starts by default when the hosts are started. If the AppReplica1 process or connection fails watchdog monitors the logs and automatically redirects to the AppReplica2 host to process.
+- GPFS is a high performance computing file system distributes and manage the data across multiple servers, and is implemented by python (Terraform) resources.
 
 ## Technologies/Skills required
 Following IBM Cloud offerings and technologies are used for the solution.
-•	IBM Cloud Provider for Terraform
-•	IBM Cloud Kubernetes
-•	IBM HTTPd server
-•	GoLang/Python
-•	IBM GPFS service
+- IBM Cloud Provider for Terraform
+- IBM Cloud Kubernetes
+- IBM HTTPd server
+- GoLang/Python
+- IBM GPFS service
 
 
 ## How does this impact client/business?
