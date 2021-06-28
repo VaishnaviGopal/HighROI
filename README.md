@@ -2,7 +2,7 @@
 Application high availability data centers in 24 hours by using IBM cloud services
 
 ## Details of Proposed Solution and Outcome
-This infrastructure on cloud is a working solution illustration used by many IBM financial domain customers. The solution demonstrates an Infrastructure as Code by using IBM Cloud services to setup IBM Sterling B2B Integrator supporting Global Mailbox. Once of the main feature of the Global Mailbox is to achieve highly available, always-on file transfer operations  between nodes and data centres. The product also administers the transaction mailboxes, messages, permissions, virtual routes, event rules.
+This infrastructure on cloud is a working solution illustration used by many IBM financial domain customers. The solution demonstrates an Infrastructure as Code by using IBM Cloud services to setup [IBM Sterling B2B Integrator](https://www.ibm.com/products/global-mailbox) supporting Global Mailbox. Once of the main feature of the Global Mailbox is to achieve highly available, always-on file transfer operations  between nodes and data centres. The product also administers the transaction mailboxes, messages, permissions, virtual routes, event rules.
 
 **Architecture**
 Solution architecture by using IBM Cloud services:
