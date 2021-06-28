@@ -2,14 +2,14 @@
 Application high availability data centers in 24 hours by using IBM cloud services
 
 ## Details of Proposed Solution and Outcome
-This infrastructure on cloud is a working solution illustration used by many IBM financial domain customers. The solution create an Infrastructure as Code by using IBM Cloud services to setup IBM Sterling B2B Integrator supporting Global Mailbox.  Once of the main feature of the Global Mailbox is supporting the replication of the files between data centres and administers the transaction mailboxes, messages, permissions, virtual routes, event rules. For more information, about the product, refer to  Global Mailbox management tool. 
+This infrastructure on cloud is a working solution illustration used by many IBM financial domain customers. The solution demonstrates an Infrastructure as Code by using IBM Cloud services to setup IBM Sterling B2B Integrator supporting Global Mailbox. Once of the main feature of the Global Mailbox is to achieve highly available, always-on file transfer operations  between nodes and data centres. The product also administers the transaction mailboxes, messages, permissions, virtual routes, event rules.
 
 **Architecture**
-Solution architecture by using IBM Cloud offerings:
+Solution architecture by using IBM Cloud services:
 
 ![HackathonArch_design](/HackathonArch_design.png)
 
-Detailed architecture flow:
+Architecture flow:
 
 - User access the application through URL.
 - Watchdog is the monitor tool that runs as part of the OS monitoring agent process for the two hosts. Watchdog agent is named as proxy agent service for AppReplica1 and AppRelica2 hosts.  The watchdog starts by default when the hosts are started. If the AppReplica1 process or connection fails watchdog monitors the logs and automatically redirects to the AppReplica2 host to process.
@@ -17,17 +17,24 @@ Detailed architecture flow:
 
 ## Technologies/Skills required
 Following IBM Cloud offerings and technologies are used for the solution.
+
 - IBM Cloud Provider for Terraform
+- IBM Cloud VSI using RedHat OpenShift
 - IBM Cloud Kubernetes
 - IBM HTTPd server
-- GoLang/Python
-- IBM GPFS service
+- GoLang
+- Python and Flask app 
+- IBM GPFS (Spectrum Scale) service
 
 
 ## How does this impact client/business?
-This infrastructure can be used by the banking solution team at IBM to cater their financial customers such as Banks without any interruption during the failure in the data centers.
+- High time to value add to our financial customer and to our IBM Sterling B2B Integrator solution team.
+- This product is currently used by more than 30000 customers, first highest clients in US and second higher clients in Japan.
+
 ### Github Repository for Solution
-<!-- When available, provide a link to your GitHub repository that will hold your solution assets; code, documentation, data set, design thinking artifacts, etc. -->
+
+Solution Git: https://github.com/VaishnaviGopal/HighROI 
+
 ### Team Name: HighROI
 1. @ggovindraj
 2. @guvaish1
