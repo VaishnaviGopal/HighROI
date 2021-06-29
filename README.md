@@ -1,13 +1,14 @@
 # HighROI
-Application high availability in 24 hours by using IBM Cloud services
-
+Port based secured app high availability 24/7 by using IBM Cloud services
 ## Details of Proposed Solution and Outcome
-This infrastructure on cloud is a working solution illustration used by many IBM financial domain customers. The solution demonstrates an Infrastructure as Code by using IBM Cloud services to setup [IBM Sterling B2B Integrator](https://www.ibm.com/products/global-mailbox) supporting Global Mailbox. Once of the main feature of the Global Mailbox is to achieve highly available, always-on file transfer operations  between nodes and data centres. The product also administers the transaction mailboxes, messages, permissions, virtual routes, event rules.
+This infrastructure on cloud is a working solution illustration used by many IBM financial domain customers. The solution demonstrates an Infrastructure as Code by using IBM Cloud services to setup any highly available application that always on file transfer operations between nodes and data centres through secured File Gateway.
+Challenge/Problem statement
+
 
 **Architecture**
 Solution architecture by using IBM Cloud services:
 
-![HackathonArch_design](/HackathonArch_design.png)
+![Arch_design](/diagrams/Arch_design.png)
 
 Architecture flow:
 
@@ -20,17 +21,13 @@ Following IBM Cloud offerings and technologies are used for the solution.
 
 - IBM Cloud Provider for Terraform
 - IBM Cloud VSI using RedHat OpenShift
-- IBM Cloud Kubernetes
 - IBM HTTPd server
-- GoLang
 - Python and Flask app 
 - IBM GPFS (Spectrum Scale) service
 
 
 ## How does this impact client/business?
-- High time to value add to our financial customer and to our IBM Sterling B2B Integrator solution team.
-- This product is currently used by more than 30000 customers, first highest clients in US and second higher clients in Japan.
-
+- High time to value add to our financial customer and IBM solution team, for example, can be used in FS Cloud regulations and by other financial customers.
 ### Github Repository for Solution
 
 Solution Git: https://github.com/VaishnaviGopal/HighROI 
