@@ -297,3 +297,54 @@ resource "kubernetes_deployment" "watchdog" {
   }
 }
 
+
+resource "kubernetes_service" "example" {
+  metadata {
+    name = "roiservice"
+  }
+  spec {
+    selector = {
+      app = kubernetes_deployment.example.metadata.0.labels.test
+    }
+    port {
+      port        = 80
+      target_port = 5001
+    }
+
+    type = "LoadBalancer"
+  }
+}
+
+resource "kubernetes_service" "example" {
+  metadata {
+    name = "roiservice"
+  }
+  spec {
+    selector = {
+      app = kubernetes_deployment.example.metadata.0.labels.test
+    }
+    port {
+      port        = 80
+      target_port = 5001
+    }
+
+    type = "LoadBalancer"
+  }
+}
+
+resource "kubernetes_service" "example2" {
+  metadata {
+    name = "roiservice2"
+  }
+  spec {
+    selector = {
+      app = kubernetes_deployment.example2.metadata.0.labels.test
+    }
+    port {
+      port        = 80
+      target_port = 5001
+    }
+
+    type = "LoadBalancer"
+  }
+}
