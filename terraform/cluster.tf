@@ -304,24 +304,7 @@ resource "kubernetes_service" "example" {
   }
   spec {
     selector = {
-      app = kubernetes_deployment.example.metadata.0.labels.test
-    }
-    port {
-      port        = 80
-      target_port = 5001
-    }
-
-    type = "LoadBalancer"
-  }
-}
-
-resource "kubernetes_service" "example" {
-  metadata {
-    name = "roiservice"
-  }
-  spec {
-    selector = {
-      app = kubernetes_deployment.example.metadata.0.labels.test
+      app = kubernetes_deployment.example1.metadata.0.labels.test
     }
     port {
       port        = 80
