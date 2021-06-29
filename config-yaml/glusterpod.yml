@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: glusterfs
+spec:
+  imagePullSecrets:
+  - name: terraformsecret2
+  containers:
+  - name: glusterfs
+    image: nginx
+    volumeMounts:
+    - mountPath: "/mnt/glusterfs"
+      name: glusterfsvol
+  volumes:
+  - name: glusterfsvol
+    glusterfs:
+      endpoints: glusterfs-cluster
+      path: "/mnt/glusterfs"
+      readWrite: true

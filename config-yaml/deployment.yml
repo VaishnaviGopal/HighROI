@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: roideployment
+spec:
+  selector:
+    matchLabels:
+      app: roi
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: roi
+    spec:
+      imagePullSecrets:
+        - name: terraformsecret2
+      containers:
+        - name: roicontainer
+          image: us.icr.io/smjtnamespace/roiapp:1
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: "1"
+            requests:
+              memory: 256Mi
+              cpu: "0.2"
+          ports:
+            - containerPort: 5001
+          volumeMounts:
+            -  name: vol1
+               mountPath: /data/roi/
+      volumes:
+        - name: vol1
+          emptyDir: {}
+      restartPolicy: Never

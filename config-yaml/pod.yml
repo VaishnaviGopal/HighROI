@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: roi-pod1
+  labels:
+    app: roi-pod1
+spec:
+  imagePullSecrets:
+  - name: terraformsecret2
+  initContainers:
+  - name: sleep-container
+    image: 'us.icr.io/smjtnamespace/ubuntu:latest'
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "sleep 120" ]
+  containers:
+  - name: roicontainer
+    image: us.icr.io/smjtnamespace/roiapp:2
+    resources:
+      limits:
+        memory: 512Mi
+        cpu: "1"
+      requests:
+        memory: 256Mi
+        cpu: "0.2"
+    ports:
+      - containerPort: 5001
+    volumeMounts:
+      -  name: vol1
+         mountPath: /data/roi/
+  volumes:
+    - name: vol1
+      emptyDir: {}
+  restartPolicy: Never

@@ -2,14 +2,12 @@
 
 import socket
 import time
-from findertools import sleep 
 from telnetlib import IP
 
 
 import socket
 import sys
 import thread
-import time
 
 
 
